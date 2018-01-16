@@ -1,0 +1,11 @@
+{
+	"name": "slack",
+	"title": "Slack",
+	"version": "1.0.0",
+	"description": "Slack integration",
+	"homepage": "",
+	"icon": "",
+	"bundledPlugins": {
+		"slack": "file:slack"
+	}
+}
