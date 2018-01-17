@@ -15,7 +15,7 @@
 	},
 	"provides": {
 		"services": {
-			"rightpane": {
+			"slack": {
 				"implements": "slack.service.Pane",
 				"module": "slack/service/Pane"
 			}
@@ -27,7 +27,7 @@
 	},
 	"configures": {
 		"services": {
-			"rightpane:styles": [{
+			"slack:styles": [{
 				"uri": "slack/css/style.css"
 			}],
 			"command:commands": [{
@@ -38,7 +38,7 @@
 					"module": "sap.watt.common.perspective/command/AbstractUIPartToggler",
 					"configuration": {
 						"id": "slack.toggle",
-						"service": "@rightpane",
+						"service": "@slack",
 						"perspective": "development"
 					}
 				},
@@ -57,8 +57,8 @@
 				"icon": ""
 			}],
 			"perspective:views": [{
-				"id": "rightpane",
-				"service": "@rightpane",
+				"id": "slack",
+				"service": "@slack",
 				"area": "right",
 				"visible": "false",
 				"cssclass": "explorer splitterContainer"
